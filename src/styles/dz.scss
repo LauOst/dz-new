@@ -1,0 +1,281 @@
+
+.w-100 {
+  width: 100% !important;
+}
+
+.w-50 {
+  width: 50% !important;
+}
+
+.h-100 {
+  height: 100% !important;
+}
+
+.h-50 {
+  height: 50% !important;
+}
+
+.h-48 {
+  height: 48% !important;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+
+.l-font-16 {
+  font-size: 16px;
+}
+
+.l-font-13 {
+  font-size: 13px;
+}
+
+.l-font-20 {
+  font-size: 20px;
+}
+
+.l-font-xs {
+  font-size: 22px;
+}
+
+.l-font-sm {
+  font-size: 26px;
+}
+
+.l-font-md {
+  font-size: 28px;
+}
+
+.l-font-lg {
+  font-size: 30px;
+}
+
+.l-font-xl {
+  font-size: 34px;
+}
+
+.l-flex {
+  display: flex;
+  -js-display: flex;
+}
+
+.l-flex-wrap {
+  flex-wrap: wrap;
+}
+
+.l-flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+.l-col-center {
+  align-items: center;
+}
+
+.l-col-top {
+  align-items: flex-start;
+}
+
+.l-col-bottom {
+  align-items: flex-end;
+}
+
+.l-row-center {
+  justify-content: center;
+}
+
+.l-row-left {
+  justify-content: flex-start;
+}
+
+.l-row-right {
+  justify-content: flex-end;
+}
+
+.l-row-between {
+  justify-content: space-between;
+}
+
+.l-row-around {
+  justify-content: space-around;
+}
+
+.l-text-left {
+  text-align: left;
+}
+
+.l-text-center {
+  text-align: center;
+}
+
+.l-text-right {
+  text-align: right;
+}
+
+.l-flex-col {
+  flex-direction: column;
+}
+
+.font-bold {
+  font-weight: 500;
+}
+
+.font-bolder {
+  font-weight: 600;
+}
+
+.l-m-l-10 {
+  margin-left: 10px;
+}
+.l-m-10 {
+  margin: 0 10px;
+}
+.mb8 {
+  margin-bottom: 20px;
+}
+.top-right-btn {
+  position: relative;
+  float: right;
+  margin-right: 5px;
+}
+
+.font-color {
+  color: #1989FA;
+}
+
+@for $i from 0 through 100 {
+  @if $i % 2 == 0 or $i % 5 == 0 {
+    .l-margin-#{$i}, .l-m-#{$i} {
+      margin: $i + px!important;
+    }
+
+    .l-padding-#{$i}, .l-p-#{$i} {
+      padding: $i + px!important;
+    }
+
+    @each $short, $long in l left, t top, r right, b bottom, lr, bt {
+
+      .l-m-#{$short}-#{$i} {
+        margin-#{$long}: $i + px!important;
+      }
+
+      .l-p-#{$short}-#{$i} {
+        padding-#{$long}: $i + px!important;
+      }
+
+      .l-margin-#{$long}-#{$i} {
+        margin-#{$long}: $i + px!important;
+      }
+
+      .l-padding-#{$long}-#{$i} {
+        padding-#{$long}: $i + px!important;
+      }
+
+      @if $short == lr {
+        .l-m-#{$short}-#{$i} {
+          margin:0 $i + px!important;
+        }
+
+        .l-p-#{$short}-#{$i} {
+          padding:0 $i + px!important;
+        }
+
+        .l-margin-#{$long}-#{$i} {
+          margin:0 $i + px!important;
+        }
+
+        .l-padding-#{$long}-#{$i} {
+          padding:0 $i + px!important;
+        }
+      }
+      //定义左右上下边距
+      @if $short == bt {
+        .l-m-#{$short}-#{$i} {
+          margin: $i + px 0!important;
+        }
+
+        .l-p-#{$short}-#{$i} {
+          padding:$i + px 0!important;
+        }
+
+        .l-margin-#{$long}-#{$i} {
+          margin: $i + px 0!important;
+        }
+
+        // 定义内边距
+        .l-padding-#{$long}-#{$i} {
+          padding: $i + px 0!important;
+        }
+      }
+    }
+  }
+}
+
+// 过滤card样式
+.card{
+  margin-bottom: 16px;
+  background: #eef1f6 !important;
+  border-left: 5px solid #009688 !important;
+  .el-form-item {
+    margin-bottom: 0 !important;
+  }
+}
+.box-card {
+  .el-card__body{
+    padding: 0;
+  }
+  .form-item{
+    height: 230px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+  .el-form-item {
+    margin-bottom: 26px !important;
+  }
+  .form-name{
+    margin-bottom: 20px !important;
+  }
+}
+
+.card-detail{
+  margin-bottom: 16px;
+  background: #eef1f6 !important;
+  .el-form-item {
+    margin-bottom: 0 !important;
+  }
+  .el-card__body{
+    padding: 2px 20px !important;
+  }
+}
+
+.card-info{
+  padding: 0 !important;
+}
+.table-card{
+ padding: 0 !important;
+}
+//产品检测列表样式控制
+.product-card {
+  .el-row {
+    height: 40px;
+    .el-col{
+      height: 100%;
+    }
+  }
+  .el-form-item {
+    margin-bottom: 0;
+  }
+}
+.text-warn{
+  color: red;
+  font-weight: 600;
+}

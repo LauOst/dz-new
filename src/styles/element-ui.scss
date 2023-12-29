@@ -1,0 +1,242 @@
+// cover some element-ui styles
+
+.el-breadcrumb__inner,
+.el-breadcrumb__inner a {
+  font-weight: 400 !important;
+  color: #fff !important;
+}
+
+.el-upload {
+  input[type="file"] {
+    display: none !important;
+  }
+}
+
+.el-upload__input {
+  display: none;
+}
+
+
+// to fixed https://github.com/ElemeFE/element/issues/2461
+.el-dialog {
+  transform: none;
+  left: 0;
+  position: relative;
+  margin: 0 auto;
+}
+
+// refine element ui upload
+.upload-container {
+  .el-upload {
+    width: 100%;
+
+    .el-upload-dragger {
+      width: 100%;
+      height: 200px;
+    }
+  }
+}
+
+// dropdown
+.el-dropdown-menu {
+  a {
+    display: block
+  }
+}
+
+// to fix el-date-picker css style
+.el-range-separator {
+  box-sizing: content-box;
+}
+.el-table {
+  .el-table__header-wrapper,
+  .el-table__fixed-header-wrapper {
+    th {
+      word-break: break-word;
+      background-color: #eef1f6;
+      color: #515a6e;
+      padding: 0 !important;
+      height: 40px;
+      line-height: 40px;
+    }
+  }
+  td {
+    padding: 0 !important;
+    height: 40px;
+    line-height: 40px;
+  }
+}
+
+// 分割线上下距离
+.el-divider--horizontal {
+  margin: 16px 0;
+}
+
+.el-input__inner {
+  &::placeholder {
+    color: #999 !important;
+  }
+}
+.el-form-item__label {
+  padding-right: 16px !important;
+}
+.el-dialog__header {
+  background: #eef1f6;
+}
+//labal和ininput样式处理
+
+.dialog {
+  .el-form-item__label {
+    background: #eef1f6;
+    height: 40px;
+    border-radius: 4px 0 0 4px !important;
+    border: 1px solid #DCDFE6;
+    border-right: none;
+    box-sizing: border-box;
+  }
+  .el-input__inner{
+    border-radius: 0 4px 4px 0 !important;
+    /*border-left: none;*/
+  }
+  .el-form-item__content {
+    line-height: 36px;
+  }
+  //.el-form-item__content, .vue-treeselect {
+  //  height: 40px;
+  //  box-sizing: border-box;
+  //}
+  //.vue-treeselect__control {
+  //  height: 38px;
+  //  line-height: 38px;
+  //  box-sizing: border-box;
+  //  padding-left: 10px !important;
+  //  border-radius: 0 4px 4px 0 !important;
+  //}
+  .el-textarea__inner {
+    border-radius: 0 0 4px 4px !important;
+  }
+  .label-head {
+    background: #eef1f6;
+    padding-left: 14px;
+    border-radius: 4px 4px 0 0;
+    border: 1px solid #DCDFE6;
+    border-bottom: none;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 40px;
+  }
+  .label-top {
+    background: #eef1f6;
+    padding-left: 14px;
+    border-radius: 4px 4px 0 0;
+    border: 1px solid #DCDFE6;
+    border-bottom: none;
+    font-weight: 700;
+    font-size: 14px;
+  }
+  .lable-swich {
+    display: inline-block;
+    padding-right: 16px;
+    padding-left: 16px;
+    width: 90px;
+    background: #eef1f6;
+    height: 40px;
+    border-radius: 4px 0 0 4px !important;
+    border: 1px solid #DCDFE6;
+    border-right: none;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    text-align: right;
+    color: #606266;
+    font-weight: 700;
+    font-size: 14px;
+  }
+  .radio-wrap{
+    display: inline-block;
+    width: calc(100% - 90px);
+    padding: 0 15px;
+    height: 40px;
+    border-radius: 0 4px 4px 0 !important;
+    border: 1px solid #DCDFE6;
+  }
+
+  .lable-swich-lg {
+    display: inline-block;
+    padding-right: 16px;
+    padding-left: 16px;
+    width: 110px;
+    background: #eef1f6;
+    height: 40px;
+    border-radius: 4px 0 0 4px !important;
+    border: 1px solid #DCDFE6;
+    border-right: none;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    text-align: right;
+    color: #606266;
+    font-weight: 700;
+    font-size: 14px;
+  }
+  .radio-wrap-lg{
+    display: inline-block;
+    width: calc(100% - 110px);
+    padding: 0 15px;
+    height: 40px;
+    border-radius: 0 4px 4px 0 !important;
+    border: 1px solid #DCDFE6;
+  }
+
+  .radio-wrap-fl{
+    display: inline-block;
+    width: calc(100% - 110px);
+    padding: 0 5px;
+    height: 40px;
+    border-radius: 0 4px 4px 0 !important;
+    border: 1px solid #DCDFE6;
+  }
+
+
+  .el-input__prefix {
+    line-height: 40px;
+  }
+
+}
+.d-lable {
+  .el-form-item__label {
+    height: 40px;
+  }
+}
+.el-upload-list__item{
+  transition: none !important;
+}
+//多选框tag内容溢出隐藏
+.multiple{
+  .el-select__tags-text {
+    display: inline-block;
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+  }
+  .el-select .el-tag__close.el-icon-close {
+    top: -7px;
+    right: -4px;
+  }
+}
+
+/**
+  问题：el-table中的内容的部分高度显示异常，通过动态显示之后比高度变小
+  解决办法：固定表头，表格部分通过calc减去表头的高度
+*/
+.el-table__header-wrapper{
+  height: 41px;
+}
+.el-table__body-wrapper{
+  height: calc(100% - 41px) !important;
+}
+//分割线的margin
+.el-divider--horizontal{
+  margin: 10px 0 20px !important;
+}
+
+
